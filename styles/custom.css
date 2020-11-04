@@ -1,0 +1,19 @@
+.navbar{
+    top:50px
+}
+.footer {
+    left: -75px;
+    bottom: 145px;
+}
+
+.garis {
+    margin-left: 10px;
+    width: 25px;
+    height: 1px;
+    background: #373636;
+}
+
+.chat {
+    bottom: 13px;
+    right: -188px;
+}
