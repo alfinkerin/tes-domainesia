@@ -1,3 +1,5 @@
+import "aos/dist/aos.css";
+
 import "../styles/index.css";
 import "../styles/custom.css";
 

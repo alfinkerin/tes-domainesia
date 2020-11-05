@@ -17,3 +17,33 @@
     bottom: 13px;
     right: -188px;
 }
+
+.bulat {
+    width: 37px;
+    height: 37px;
+    background-color: #64f18e;
+  }
+
+  .line {
+    width: 1px;
+    height: 39px;
+    border: solid 1px #707070;
+    background-color: #707070 ;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+
+  }
+
+  .bulatan {
+    right: 67px;
+  }
+
+  .bulatan2{
+      left: 67px;
+  }
+
+  .burger {
+      top: 15px;
+      right: 15px;
+  }
