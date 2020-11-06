@@ -121,6 +121,7 @@ function index() {
         className="w-full relative py-10 justify-between section3  px-2 md:px-32 h-screen md:flex md:flex-wrap "
       >
         <Sidebar4 />
+        {/* sebenarnya bisa menggunakan provider penyimpanan gambar seperi dropbox dll, di karenakan koneksi lemot maka di masukan di asset */}
         <img
           alt="test domainesia"
           className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
@@ -181,7 +182,7 @@ function index() {
 
 // step 1. menggunakan getStaticprops dan async untuk mengambil data
 // export async function getStaticProps() {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts") <-masukan url api;
 //   const posts = await res.json();
 
 //   return {
