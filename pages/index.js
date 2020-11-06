@@ -13,6 +13,7 @@ import { hosting } from "./api/hosting";
 import Sidebar3 from "../components/Sidebar3";
 import next from "next";
 import Sidebar4 from "../components/Sidebar4";
+import Head from "next/head";
 
 function index() {
   // menggunakan react hooks untuk mengupdate sama seperti didmount atau willmount
@@ -25,6 +26,15 @@ function index() {
   }, []);
   return (
     <div className="w-full ">
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta
+          name="tes domainesia"
+          content="ini adalah tes masuk untuk domainesia, semoga saya bisa masuk tahap selanjutnya"
+        />
+        <title>Tes Dominisia</title>
+        <link rel="shortcut icon" href="/fav.ico"></link>
+      </Head>
       <Header />
       <Fotter />
       <Chat />
@@ -91,7 +101,7 @@ function index() {
       >
         <Sidebar3 />
         {hosting.map((host, i) => (
-          <div className="border-none w-full md:w-1/3 md:h-auto my-8 md:my-0  bg-white rounded md:mx-4  border-4 shadow-2xl">
+          <div className="border-none w-full md:w-1/3 md:h-auto my-8 md:my-0  bg-white transition duration-500 ease-in-out cursor-pointer  transform hover:-translate-y-1 hover:scale-110 rounded md:mx-4  border-4 shadow-2xl">
             <ul className=" pb-6 pt-12">
               <li className="w-full h-auto text-3xl md:text-4xl xl:text-5xl font-bold text-white text-center bg-dark ">
                 {host.title}
@@ -112,26 +122,32 @@ function index() {
       >
         <Sidebar4 />
         <img
+          alt="test domainesia"
           className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
           src="/bmw.png"
         />
         <img
+          alt="test domainesia"
           className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
-          src="/app.png"
+          src="/steam.png"
         />
         <img
+          alt="test domainesia"
           className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
           src="/chev.png"
         />
         <img
+          alt="test domainesia"
           className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
           src="/toyota.png"
         />
         <img
+          alt="test domainesia"
           className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
           src="/samsung.png"
         />
         <img
+          alt="test domainesia"
           className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
           src="/osu.png"
         />
@@ -151,6 +167,8 @@ function index() {
 // 3. maping
 
 // simulasi fetching api next.js
+
+// 2. masukan nilai props dan maping
 // function index({ posts }) {
 //   return (
 //     <ul>
@@ -161,6 +179,7 @@ function index() {
 //   )
 // }
 
+// step 1. menggunakan getStaticprops dan async untuk mengambil data
 // export async function getStaticProps() {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
 //   const posts = await res.json();
