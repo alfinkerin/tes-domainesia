@@ -1,6 +1,6 @@
 import React from "react";
 
-function Sidebar2() {
+function Sidebar4() {
   return (
     <div className="absolute hidden md:block bulatan2 block self-center">
       <a href="#home">
@@ -12,7 +12,7 @@ function Sidebar2() {
       </div>
 
       <a href="#about">
-        <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-ijo" />
+        <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-white" />
       </a>
 
       <div className="line" />
@@ -22,10 +22,10 @@ function Sidebar2() {
 
       <div className="line" />
       <a href="#partner">
-        <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-white" />
+        <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-ijo" />
       </a>
     </div>
   );
 }
 
-export default Sidebar2;
+export default Sidebar4;

@@ -1,5 +1,5 @@
 // import dari component
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Chat from "../components/Chat";
 import Fotter from "../components/Fotter";
 import Header from "../components/Header";
@@ -9,6 +9,10 @@ import Home2 from "../assets/home2.svg";
 import Sidebar2 from "../components/Sidebar2";
 // menggunakan modul aos
 import AOS from "aos";
+import { hosting } from "./api/hosting";
+import Sidebar3 from "../components/Sidebar3";
+import next from "next";
+import Sidebar4 from "../components/Sidebar4";
 
 function index() {
   // menggunakan react hooks untuk mengupdate sama seperti didmount atau willmount
@@ -24,12 +28,15 @@ function index() {
       <Header />
       <Fotter />
       <Chat />
-      <div className="w-full relative px-2 md:px-16 h-screen md:flex  pt-40">
-        <div className="block md:hidden w-full self-center  ">
+      <div
+        id="home"
+        className="w-full relative px-2 md:px-16 h-screen md:flex  pt-40"
+      >
+        <div className="block sm:w-2/3 md:hidden w-full self-center  ">
           <Home />
         </div>
         <div className="w-full md:w-2/5 mt-16 md:mt-20 self-center">
-          <p className=" text-3xl md:text-2xl text-center md:text-left font-bold">
+          <p className=" text-xl md:text-2xl text-center md:text-left font-bold">
             Lorem Ipsum is simply dummy text of the printing and
             typesettingindustry.
           </p>
@@ -47,13 +54,16 @@ function index() {
         </div>
         <Sidebar />
       </div>
-      <div className="w-full px-16 h-screen flex bg-dark  pt-40">
+      <div
+        id="about"
+        className="w-full px-2 md:px-16 h-screen block md:flex bg-dark py-6  md:pt-40"
+      >
         <Sidebar2 />
-        <div className="w-3/5">
+        <div className="w-full pt-4 md:w-3/5">
           {/* data aos berasal dari modul aos tinggal memasukan aja effect yg mau di pilih */}
           <Home2 data-aos="fade-down" />
         </div>
-        <div className="pt-16 w-2/5">
+        <div className="pt-16 w-full md:w-2/5">
           <div
             data-aos="fade-up"
             className="  text-white md:text-md xl:text-xl font-bold"
@@ -61,25 +71,105 @@ function index() {
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout
           </div>
-          <div data-aos="fade-up" className="text-white text-xs mt-4">
+          <div data-aos="fade-up" className="text-white text-xs  mt-4">
             Many desktop publishing packages and web page editors now use Lorem
             Ipsum as their default model text, and a search for 'lorem ipsum'
-            will uncover many web sites still in their infancy. Various versions
-            have evolved over the years, sometimes by accident, sometimes on
-            purpose (injected humour and the like).
+            will uncover many web sites still in their infancy.
           </div>
           <div className=" text-right">
-            <button
-              data-aos="fade-right"
-              className="lg:w-40 xl:w-48 mt-4  bg-merah text-white text-xs xl:text-lg font-bold py-2 px-4 rounded"
-            >
+            <button className=" w-full lg:w-40 xl:w-48 mt-4  bg-merah text-white text-xs xl:text-lg font-bold py-2 px-4 rounded">
               Lorem
             </button>
           </div>
         </div>
       </div>
+
+      <div
+        id="hosting"
+        style={{ backgroundImage: "url('bg.png')", height: "auto" }}
+        className="w-full relative py-16 section3 px-2 md:px-16 h-screen md:flex "
+      >
+        <Sidebar3 />
+        {hosting.map((host, i) => (
+          <div className="border-none w-full md:w-1/3 md:h-auto my-8 md:my-0  bg-white rounded md:mx-4  border-4 shadow-2xl">
+            <ul className=" pb-6 pt-12">
+              <li className="w-full h-auto text-3xl md:text-4xl xl:text-5xl font-bold text-white text-center bg-dark ">
+                {host.title}
+              </li>
+              <li className="text-center text-2xl my-2 md:text-3xl xl:text-4xl">
+                {host.harga}
+              </li>
+              <li className="px-8 md:px-10 xl:px-16 text-lg md:text-xl font-thin xl:text-2xl  text-center">
+                {host.content}
+              </li>
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div
+        id="partner"
+        className="w-full relative py-10 justify-between section3  px-2 md:px-32 h-screen md:flex md:flex-wrap "
+      >
+        <Sidebar4 />
+        <img
+          className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
+          src="/bmw.png"
+        />
+        <img
+          className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
+          src="/app.png"
+        />
+        <img
+          className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
+          src="/chev.png"
+        />
+        <img
+          className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
+          src="/toyota.png"
+        />
+        <img
+          className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
+          src="/samsung.png"
+        />
+        <img
+          className="w-full my-8 md:my-0 md:w-56 md:h-56 md:mx-2 xl:mx-6"
+          src="/osu.png"
+        />
+      </div>
     </div>
   );
 }
+
+// simulasi fetching data api React.js
+// 1.membuat state
+// const [post, setPost] = useState([])
+// 2. mengupdate data dengan useEffect
+// useEffect(()=> {
+//  gunakan fetching dari javascript atau bisa menggunakan axios
+
+// })
+// 3. maping
+
+// simulasi fetching api next.js
+// function index({ posts }) {
+//   return (
+//     <ul>
+//       {posts.map((post) => (
+//         <li>{post.title}</li>
+//       ))}
+//     </ul>
+//   )
+// }
+
+// export async function getStaticProps() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const posts = await res.json();
+
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }
 
 export default index;

@@ -8,4 +8,8 @@ body {
   @apply font-popins
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 

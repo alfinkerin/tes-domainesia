@@ -3,16 +3,27 @@ import React from "react";
 function Sidebar() {
   return (
     <div className="absolute hidden md:block bulatan block self-center">
-      <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-ijo" />
+      <a href="#home">
+        <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-ijo" />
+      </a>
+
       <div className="w-full">
         <div className="line" />
       </div>
 
-      <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-white" />
+      <a href="#about">
+        <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-white" />
+      </a>
+
       <div className="line" />
-      <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-white" />
+      <a href="#hosting">
+        <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-white" />
+      </a>
+
       <div className="line" />
-      <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-white" />
+      <a href="#partner">
+        <div className="rounded-full border-2 border-black border-opacity-50 h-6 w-6 cursor-pointer bg-white" />
+      </a>
     </div>
   );
 }

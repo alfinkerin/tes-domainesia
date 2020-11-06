@@ -1,14 +1,18 @@
 export const menus = [
   {
     name: "Home",
+    link: "#home",
   },
   {
     name: "About",
+    link: "#about",
   },
   {
-    name: "Service",
+    name: "Hosting",
+    link: "#hosting",
   },
   {
     name: "Partner",
+    link: "#partner",
   },
 ];

@@ -29,10 +29,10 @@ function Header() {
         <div className="w-full justify-between flex bg-white shadow-xl px-4 md:px-16 ">
           <Logo className="w-16 py-2" />
 
-          <div className="hidden md:block self-center font-semibold text-dark text-2xl ml-2">
+          <div className="hidden md:block self-center font-semibold text-dark text-sm lg:text-2xl ml-2">
             Your
           </div>
-          <div className="hidden md:block self-center font-semibold text-ijo text-2xl ml-2">
+          <div className="hidden md:block self-center font-semibold text-ijo text-sm lg:text-2xl ml-2">
             Name
           </div>
           <div className="w-full self-center hidden md:block">
@@ -40,9 +40,11 @@ function Header() {
               {/* memakai cara maping untuk menampilkan isi array tersebut */}
               {menus.map((g, i) => (
                 <ul className="" key={i}>
-                  <li className="mx-8 font-semibold text-lg cursor-pointer hover:text-gray-500">
-                    {g.name}
-                  </li>
+                  <a href={g.link}>
+                    <li className="mx-2 lg:mx-8 font-semibold text-lg cursor-pointer hover:text-gray-500">
+                      {g.name}
+                    </li>
+                  </a>
                 </ul>
               ))}
             </div>
@@ -70,9 +72,11 @@ function Header() {
           {/* memakai cara maping untuk menampilkan isi array tersebut */}
           {menus.map((g, i) => (
             <ul className="" key={i}>
-              <li className="my-6 text-white font-semibold text-4xl ">
-                {g.name}
-              </li>
+              <a href={g.link}>
+                <li className="my-6 text-white font-semibold text-4xl ">
+                  {g.name}
+                </li>
+              </a>
             </ul>
           ))}
         </div>
