@@ -29,6 +29,11 @@ function index() {
       <Head>
         <meta charSet="UTF-8" />
         <meta
+          name="Description"
+          content="Alfin Kerin Saputra,
+   Test Domainesia front end website"
+        ></meta>
+        <meta
           name="tes domainesia"
           content="ini adalah tes masuk untuk domainesia, semoga saya bisa masuk tahap selanjutnya"
         />
@@ -46,10 +51,10 @@ function index() {
           <Home />
         </div>
         <div className="w-full md:w-2/5 mt-16 md:mt-20 self-center">
-          <p className=" text-xl md:text-2xl text-center md:text-left font-bold">
+          <h1 className=" text-xl md:text-2xl text-center md:text-left font-bold">
             Lorem Ipsum is simply dummy text of the printing and
             typesettingindustry.
-          </p>
+          </h1>
           <div className="flex justify-between">
             <button className="w-1/2 mx-2 md:mx-0 md:w-40 xl:w-48 mt-4  bg-merah text-white text-xs xl:text-lg font-bold py-2 px-4 rounded">
               Lorem
